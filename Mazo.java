@@ -1,33 +1,40 @@
-
+import java.util.ArrayList;
 /**
- * Write a description of class Mazo here.
+ * un juego de cartas basado en la baraja de cartas francesas o de póker. En el mismo pueden participar de 2 a 8 
+ * jugadores. Basta con conseguir que las cartas se repartan entre los jugadores.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Esta clase contendrá todas las cartas de la baraja. 
  */
 public class Mazo
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    // colección de String para poder guardar todas las cartas de la baraja.
+    private ArrayList<String> baraja;
 
     /**
      * Constructor for objects of class Mazo
      */
-    public Mazo()
+    public Mazo(int numero, String palo)
     {
-        // initialise instance variables
-        x = 0;
+        //         baraja = new ArrayList<>();
+        //         if(numero == 1){
+        //             baraja.add(numero = "As"; palo = "Corazones");
+        //             baraja.add(numero = "As"; palo = "Diamantes");
+        //             baraja.add(numero = "As"; palo = "Treboles");
+        //             baraja.add(numero = "As"; palo = "Picas");
+        //         }
+        //         if(numero == 11){
+        //             baraja.add(numero = "J"; palo = "Corazones");
+        //             baraja.add(numero = "J"; palo = "Diamantes");
+        //             baraja.add(numero = "J"; palo = "Treboles");
+        //             baraja.add(numero = "J"; palo = "Picas");
+        //         }
+        //         if(numero == 121){
+        //             baraja.add(numero = "Q"; palo = "Corazones");
+        //             baraja.add(numero = "Q"; palo = "Diamantes");
+        //             baraja.add(numero = "Q"; palo = "Treboles");
+        //             baraja.add(numero = "Q"; palo = "Picas");
+        //         }
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+     
 }

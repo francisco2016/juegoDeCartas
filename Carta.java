@@ -1,33 +1,87 @@
 
+
 /**
- * Write a description of class Carta here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * un juego de cartas basado en la baraja de cartas francesas o de póker. En el mismo pueden participar de 2 a 8 
+ * jugadores. Basta con conseguir que las cartas se repartan entre los jugadores.
  */
 public class Carta
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    // guarda el valor de la carta.
+    private int valor;
+    // guarda el nombre del palo de la baraja.
+    private String palo;
 
     /**
      * Constructor for objects of class Carta
      */
-    public Carta()
+    public Carta(int valor, String palo)
     {
-        // initialise instance variables
-        x = 0;
+        this.valor =  valor;
+        this.palo = palo;
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * devuelve una cadena con el nombre de la carta.
      */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public String getNombre(){
+        String nombre = "";
+        if(valor == 1){
+            nombre = "As de " +palo;
+        }
+        else if(valor == 11){
+            nombre = "J de " +palo;
+        }
+        else if(valor == 12){
+            nombre = "Q de " +palo;
+        }
+        else if(valor == 13){
+            nombre = "K de " +palo;
+        }
+        else{
+            nombre = valor+ " de " +palo;
+        } 
+        return nombre;
     }
+    
+    /**
+     * retorna un entero con el valor correspondiente a la carta (1, 2, ..., 13).
+     */
+    public int getValor(){
+        return valor;
+    }
+    
+    /**
+     * retorna un entero con el valor correspondiente a la carta (1, 2, ..., 13).
+     */
+    public String getPalo(){
+        return palo;
+    }
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
