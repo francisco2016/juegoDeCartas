@@ -6,56 +6,52 @@
  */
 public class Carta
 {
-    // guarda el valor de la carta.
-    private int valor;
-    // guarda el nombre del palo de la baraja.
-    private String palo;
-
-    /**
-     * Constructor for objects of class Carta
-     */
-    public Carta(int valor, String palo)
-    {
-        this.valor =  valor;
-        this.palo = palo;
-    }
-
-    /**
-     * devuelve una cadena con el nombre de la carta.
-     */
-    public String getNombre(){
-        String nombre = "";
-        if(valor == 1){
-            nombre = "As de " +palo;
-        }
-        else if(valor == 11){
-            nombre = "J de " +palo;
-        }
-        else if(valor == 12){
-            nombre = "Q de " +palo;
-        }
-        else if(valor == 13){
-            nombre = "K de " +palo;
-        }
-        else{
-            nombre = valor+ " de " +palo;
-        } 
-        return nombre;
-    }
-    
-    /**
-     * retorna un entero con el valor correspondiente a la carta (1, 2, ..., 13).
-     */
-    public int getValor(){
-        return valor;
-    }
-    
-    /**
-     * retorna un entero con el valor correspondiente a la carta (1, 2, ..., 13).
-     */
-    public String getPalo(){
-        return palo;
-    }
+  //guarda el valor de la carta; 1, 2 ,...K
+  private int valor;
+  //guarda el palo de la baraja 
+  private String palo;
+  
+  //Para dar valor a los atributos.
+  public Carta(int valor, String palo){
+    this.valor = valor;
+    this.palo = palo;    
+  }
+  /**
+   * devuelve una cadena con el nombre de la carta.
+   */  
+  public String getNombre(){
+      String carta = "";
+      if(valor == 1){
+      carta = "As de: " +palo;  
+      }
+      else if(valor == 11){
+      carta = "J de: "  +palo;  
+      }
+      else if(valor == 12){
+      carta = "Q de: "  +palo;  
+      }
+      else if(valor == 13){
+      carta = "K de: "  +palo;  
+      }
+      else{        
+          carta = valor + " de:  "  +palo;
+      } 
+      return carta;
+  }
+  
+  /**
+   * con el valor correspondiente a la carta (1, (): retorna un entero 2, ..., 13).
+   */
+  public int getValor(){
+      return valor;
+  }
+  
+  /**
+   *retorna una cadena que contiene el palo correspondiente a la carta (picas, treboles, diamantes o corazones).
+   */
+  public String getPalo(){
+      return palo;  
+  }
     
 }
 

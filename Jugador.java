@@ -1,31 +1,40 @@
-
+import java.util.ArrayList;
 /**
  * un juego de cartas basado en la baraja de cartas francesas o de póker. En el mismo pueden participar de 2 a 8 
  * jugadores. Basta con conseguir que las cartas se repartan entre los jugadores.
  */
 public class Jugador
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    //para guardar el id del jugador.
+    private int id;
+    //para almacenar un grupo de jugadores
+    private ArrayList<Carta> cartas;
 
-    /**
-     * Constructor for objects of class Jugador
-     */
-    public Jugador()
-    {
-        // initialise instance variables
-        x = 0;
+    //para inicializar el ArrayList.
+    public Jugador(int id){
+        this.id = id;
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * agrega la carta unaCarta a las que posee el jugador.
      */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public void recibirCarta(Carta unaCarta){
+        cartas.add(unaCarta);
     }
+
+    /**
+     * devuelve una colección de cadenas con los nombres de las cartas
+     */
+    public ArrayList<String> cartasQueTieneEnLaMano(){
+        ArrayList<String> cartasTiene = new ArrayList<>();// VL de tipo A..List para guardar las cartas que va adquiriendo.
+        for(Carta carta : cartas){//recorro la colección de cartas 
+            cartasTiene.add(carta.getNombre());
+        }
+        return cartasTiene;
+    }
+
+
+
+
+
 }
