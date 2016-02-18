@@ -7,12 +7,15 @@ public class Jugador
 {
     //para guardar el id del jugador.
     private int id;
-    //para almacenar un grupo de jugadores
+    //para crear un objeto carta.
     private ArrayList<Carta> cartas;
 
-    //para inicializar el ArrayList.
+    /**
+     * Constructor for objects of class Jugador
+     */
     public Jugador(int id){
         this.id = id;
+        cartas = new ArrayList<>();
     }
 
     /**
@@ -21,7 +24,14 @@ public class Jugador
     public void recibirCarta(Carta unaCarta){
         cartas.add(unaCarta);
     }
-
+    
+    /**
+     * mt para obtener el id del jugador
+     */
+    public int getId(){
+        return id;
+    }
+    
     /**
      * devuelve una colección de cadenas con los nombres de las cartas
      */
@@ -33,8 +43,6 @@ public class Jugador
         return cartasTiene;
     }
 
-
-
-
-
 }
+
+

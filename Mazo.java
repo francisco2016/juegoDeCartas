@@ -28,6 +28,7 @@ public class Mazo{
         baraja.add(new Carta(13, "corazones"));        baraja.add(new Carta(13, "picas"));
 
         baraja.add(new Carta(1, "treboles"));        baraja.add(new Carta(1, "diamantes"));
+        baraja.add(new Carta(2, "treboles"));        baraja.add(new Carta(2, "diamantes"));
         baraja.add(new Carta(3, "treboles"));        baraja.add(new Carta(3, "diamantes"));
         baraja.add(new Carta(4, "treboles"));        baraja.add(new Carta(4, "diamantes"));
         baraja.add(new Carta(5, "treboles"));        baraja.add(new Carta(5, "diamantes"));
